@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<center>
+    <form action="" method="post">
+    {% csrf_token %}
+
+    <button type="submit" name="Create">Create Task</button>
+    </form>
+<br><br><br>
+    <table bgcolor="blue" border="5" width="50%">
+        <thead>
+            <th> TASK </th>
+            <th> STATUS </th>
+        </thead>
+        {% for i in status %}
+        <tr>
+            <td>{{i.task}}</td>
+            <td>{{i.status}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</center>
+</body>
+</html>

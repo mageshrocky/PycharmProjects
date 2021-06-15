@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <center>
+	<title>REGISTER TASK</title>
+    </center>
+</head>
+<body>
+<center>
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{form}}
+        Name : <input type="text" placeholder="your_name" name="names"><br><br>
+        Role : <input type="text" placeholder="your_role" name="roles"><br><br>
+        Task : <input type="text" placeholder="your_task" name="tasks"><br><br>
+        Status : <input type="text", placeholder="pending or completed" name="statu"><br><br>
+
+
+    <br><br>
+    <button type="submit" name="submit">Submit task</button>
+	<input type="reset" value="Cancel" name="enquiry">
+    </form>
+    <br><br>
+    <center><a href="{% url 'back' %}">BACK</a> </center>
+    <br><br>
+    <center><a href="{% url 'logout' %}">LOGOUT</a> </center>
+
+</center>
+</body>
+</html>
